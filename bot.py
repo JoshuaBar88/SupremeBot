@@ -68,9 +68,9 @@ def order(k):
     
     #driver.find_element_by_xpath('//*[@id="orcer"]').send_keys(k["cvv"])
     driver.find_element_by_xpath('//*[@id="cart-cc"]/fieldset/p[2]/label/div/ins').click()
-    driver.find_element_by_xpath('//*[@id="order_billing_state"]/option[55]').click()
-    driver.find_element_by_xpath('//*[@id="credit_card_month"]/option[4]').click()
-    driver.find_element_by_xpath('//*[@id="credit_card_year"]/option[4]').click()
+    driver.find_element_by_xpath('//*[@id="order_billing_state"]/option[]').click()
+    driver.find_element_by_xpath('//*[@id="credit_card_month"]/option[]').click()
+    driver.find_element_by_xpath('//*[@id="credit_card_year"]/option[]').click()
     time.sleep(2)
     driver.find_element_by_xpath('//*[@id="pay"]/input').click()
 
@@ -83,15 +83,15 @@ if __name__ == '__main__':
  
     keys = {
     "name": "Joshua Barnett",
-    #"url": "4447962409932096",
-    "email": "ti.joshuabarnett@gmail.com",
-    "phone": "347-972-6340",
-    "address": "76 Limestone Way",
-    "zip": "22406",
+    #"url": "",
+    "email": "",
+    "phone": "",
+    "address": "",
+    "zip": "",
     "otherA": "",
-    "cards": "4789751001074563",
-    "cvv": "693",
-    "city": "Fredericksburg"
+    "cards": "",
+    "cvv": "",
+    "city": ""
     } 
     for i in range(2):
         p = multiprocessing.Process(target= order, args=(keys, ))
